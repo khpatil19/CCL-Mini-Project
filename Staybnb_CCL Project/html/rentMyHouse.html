@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staybnb | Host</title>
+
+    <link
+      class="jsbin"
+      href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+    ></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link href="../css/rentMyHouse.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav>
+      
+        <label class="logo">Staybnb</label>
+        <ul>
+          <li><a class="inactive"    href="../html/home.html"><b>Home</b></a></li>
+          <li><a class="inactive"  href="../html/browse.html"><b>Browse</b></a></li>
+          <li><a class="active"  href="../html/rentMyHouse.html"><b>Rent my house</b></a></li>
+          <li><a class="inactive"  href="../html/aboutUs.html"><b>About us</b></a></li>
+
+          <li><a class="logout"  onclick="logout()" ><b>LOGOUT</b></a></li>
+
+        </ul>
+  </nav>
+
+<div class="cta">
+    <h3>Sharing <br>Is Earning Now!</h3>
+    <p>Great opportunity to make money by sharing your extra space.</p>
+
+</div>
+
+<div class="main-div">
+<div class="full-contaier">
+
+<h2 class="heading">Provide house details!</h2> 
+<br>
+
+
+<label class="custom-field">
+                  
+    <input id="aptName" type="text" class="input" required/>
+    <span class="placeholder">Room No./ Apartment No.</span>
+    
+   
+</label>
+
+<label class="custom-field">
+                  
+    <input id="bldgName" type="text" class="input" required/>
+    <span class="placeholder">Building name</span>
+    
+   
+</label>
+
+<br>
+<br>
+
+<label class="custom-field">
+                  
+    <input id="societyName" type="text" class="input" required/>
+    <span class="placeholder">Society name</span>
+    
+   
+</label>
+
+<label class="custom-field">
+                  
+  <input id="location" type="text" class="input" required/>
+  <span class="placeholder">Location</span>
+  
+ 
+</label>
+
+
+  <div>
+    <textarea class="fulladd" id="fulladd" type="text" class="input" placeholder="Full address" required></textarea>
+    
+  </div>
+<br>
+<br>
+  <label class="custom-field">
+                  
+    <input id="mobile" type="text" class="input"  required  style="opacity: 0.7; cursor: no-drop;"/>
+    <span class="placeholder">Registered mobile</span>
+  </label>
+
+  <label class="custom-field">
+                  
+    <input id="email" type="text" class="input"  required  style="opacity: 0.7; cursor: no-drop;"/>
+    <span class="placeholder">Registered mail</span>
+  </label>
+
+  <br>
+  <br>
+  <label class="custom-field">
+                  
+    <input id="fees" type="text" class="input"  required/>
+    <span class="placeholder">Rent per day</span>
+  </label>
+
+  <label class="custom-field">
+                  
+    <input id="uid" type="text" class="input"  hidden = "hidden" required/>
+    <span class="placeholder"></span>
+  </label>
+
+</div>
+
+<button type="submit" class="button-renthouse" onclick="registerHouse()" id="rent">Rent my house!</button>
+
+
+<br>
+<br>
+  <h2 class="heading2">Upload house image!</h2> 
+  <br>
+  <input type="file"  name="file" id="file" class="inputfile" onchange="readURL(this);" onclick="image()" />
+  <label for="file">Choose a file</label>
+    <!-- <img id="img1" src="#" alt="" /> -->
+    
+
+    <script>
+    function readURL(input) {
+    
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#img1').attr('src', e.target.result).width(500).height(300);
+
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+    </script>
+
+<img class="img1" id="img1" src="#" alt="" />
+
+
+<br>
+<br>
+  <h2 class="heading3">Select house amenities</h2> 
+<br>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+    <label class="form-check-label" for="flexCheckDefault">
+      24/7 Water Supply
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+      24/7 Electricity
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+      Elevator available
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+      Essential stores nearby
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+      Wifi available
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+      Maid services available
+    </label>
+  </div>
+
+</div>
+
+<div class="container">
+  
+  <div class="popup" id="popup">
+    <img src="../images/404-tick.png">
+    <h2>Annnnd Done!</h2>
+    <p>Your house has been listed, please give it a few minutes to show under the browse section.</p>
+    <button type="button" onclick="redirect()">OK</button>
+  </div>
+
+</div>
+
+
+
+    
+    
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script src="../js/firebase.js"></script>
+    
+    <script src="../js/rentMyHouse.js"></script>
+  
+</body>
+</html>

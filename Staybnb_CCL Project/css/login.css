@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    background: #0046BB;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+::placeholder {
+    color: #ABB1CA;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+  }
+.passwordinput{
+    letter-spacing: 5px;
+
+   
+}
+
+
+.card{
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+
+.text1{
+    padding-left: 55px;
+    font-size: 22px;
+    font-weight: 550;
+    font-family: 'Poppins';
+}
+
+.text2{
+    padding-left: 45px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    color: #0046BB;
+}
+.custom-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+.custom-field input{
+    padding: 12px;
+    
+    font-family: 'Poppins';
+    width: 400px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #F5F8FD;
+    border: 0.7px solid #F5F8FD;
+    outline-color: #0046BB;
+    
+}
+
+
+
+/*.custom-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #ABB1CA;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}*/
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder{
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: white;
+    
+}
+
+.message{
+    font-size: 70px;
+    font-family: 'Poppins';
+    color: steelblue;
+}
+
+.success{
+    font-size: 18px;
+    margin-top: 15px;
+    color: seagreen;
+    font-family: 'Poppins';
+}
+
+.error{
+    font-family: 'Poppins';
+}
+
+.forgotpass{
+    font-family: 'Poppins';
+}
+
+.sendLink{
+  font-family: 'Poppins';
+}
+
+
+.button {
+    background: #0046BB;
+    color: #fff;
+    border: 1px solid #0046BB;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    font-family: 'Poppins';
+
+  }
+  
+  .button:hover {
+    background: #0078EC;
+ 
+    color: #FFF;
+    border: 1px solid #0078EC;
+    cursor: pointer;
+
+  }
+  .button2 {
+    background: black;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    font-family: 'Poppins';
+  }
+  
+  .button2:hover {
+    background: #fff;
+    color: black;
+    font-weight: 900;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  

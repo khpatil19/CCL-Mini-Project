@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.block-one{
+    background-color: #F7F6F9 ;
+    margin-top: 56px;
+    /* padding-left: 300px; */
+    transform: translateX(350px);
+  
+    width: 1200px;
+    height: 400px;
+}
+
+.block-one h1{
+    font-size: 55px;
+    
+    transform: translateX(500px);
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.block-one h2{
+    font-size: 40px;
+    color: #393939;
+    
+    transform: translateX(435px);
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.p1{
+    font-size: 25px;
+    color: #505050;
+    
+    transform: translateX(340px);
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.p2{
+    font-size: 25px;
+    color: #505050;
+    
+    padding-left: 70px;
+    font-weight: 400;
+
+}
+
+.imglink{
+    padding-top: 30px;
+    transform: translateX(540px);
+}
+
+.block-two{
+    margin-top: 0px;
+    
+    transform: translateX(350px);
+  
+    width: 1200px;
+    height: 400px;
+}
+
+.slogan{
+    color: #7A6CAC;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.block-two h1{
+    
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.intro{
+    color: #403E3E;
+    font-size: 20px;
+}
+
+.left-div{
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+.right-div{
+    float: right;
+    
+}
+
+.aboutusimg{
+    transform: translateY(-250px);
+    /* transform: translateX(70px); */
+    margin-right: 90px;
+   
+}

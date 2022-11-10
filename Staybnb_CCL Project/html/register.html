@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Staybnb | Register</title>
+        
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+        <link href="../css/register.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex justify-content-center p-5">
+        <!-- <div class="container"> -->
+        <div class="card">
+            <br>
+                <h2 class="text">Register with us</h2>
+                <center><img src="../images/doodle09.jpg" alt="doodle" width="250" height="250"></center>
+            
+            <form onsubmit="signUp()" id="registerForm" class="card-body px-5 py-4">
+                <center><span id="error" style="color: red"></span></center>
+                <center><span class ="error" id="success" style="color: green"></span></center>
+               
+                <center>
+                    <!-- <label class="custom-field">
+                    <input id="fullname" type="text" class="input" required placeholder="Name" />
+                  
+                </label><br /> -->
+                <!-- <label class="custom-field">
+                    <input id="mobile" type="text" class="input" required placeholder="Mobile" />
+                
+                </label><br /> -->
+                <label class="custom-field">
+                    <input id="email" type="text" class="input" required placeholder="Email" />
+                   
+                </label><br />
+                <label class="custom-field">
+                    <input id="password" type="password" class="passwordinput" placeholder="Password" required />
+                   
+                </label><br />
+                <label class="custom-field">
+                    <input id="repassword" type="password" class="passwordinput" required placeholder="Re-enter password" />
+                   
+                </label><br /><br/>
+                <div class="form-check" id="termslink" >
+                    <input onclick="disableFunction()" class="form-check-input" type="checkbox" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      I accept the <a href="../html/terms.html">terms of service.</a>
+                    </label>
+                  </div>
+                <br>
+              
+                <button id="signup" type="submit" class="button" disabled = true>Validate</button>
+                <button id="signin" type="submit" class="button" onclick="redirect()">Proceed</button>
+                </center>
+            </form>
+        </div>
+        
+        
+        
+
+
+
+        <!-- <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div> -->
+
+    <!-- </div> -->
+   
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+         <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+        <script src="../js/firebase.js"></script>
+        <script src="../js/register.js"></script>
+    </body>
+</html>
